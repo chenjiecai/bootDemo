@@ -49,6 +49,7 @@ public class ChartController extends BaseController {
         Dto dto=new Dto();
         dto.put("list",list);
         dto.put("data",jsonObject);
+        System.out.println("123");
         return dto;
     }
 
