@@ -5,6 +5,8 @@ import com.bootdo.common.controller.BaseController;
 import com.bootdo.common.domain.Charts;
 import com.bootdo.common.utils.Dto;
 import net.sf.json.JSONArray;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -15,6 +17,7 @@ import java.util.List;
 @Controller
 @RequestMapping("sys/chart")
 public class ChartController extends BaseController {
+    private  final Logger logger=LoggerFactory.getLogger(ChartController.class);
     @RequestMapping("/zhuzhuang")
     @ResponseBody
     public Dto getZhuZhuang (){
@@ -49,7 +52,7 @@ public class ChartController extends BaseController {
         Dto dto=new Dto();
         dto.put("list",list);
         dto.put("data",jsonObject);
-        System.out.println("123");
+        logger.info("list:"+list+"data:"+jsonObject);
         return dto;
     }
 
