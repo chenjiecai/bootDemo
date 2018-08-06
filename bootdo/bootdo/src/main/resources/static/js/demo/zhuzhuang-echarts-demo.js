@@ -11,7 +11,6 @@ $(function () {
             abc=data.data;
         }
     });
-    alert(msg)
     var barChart = echarts.init(document.getElementById("echarts-bar-chart"));
     var baroption = {
         title : {
